@@ -1,3 +1,5 @@
 .env
-sql/
 credentials.json
+__pycache__
+sql/*
+!sql/.gitkeep
