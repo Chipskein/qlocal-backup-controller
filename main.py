@@ -47,12 +47,6 @@ class BackupController:
         os.chdir('../')
         os.system('rm latest.dump');
         drive.DownloadAll();
-
-
-
-
-
-
 #Make CLI controller
 control=BackupController() 
-control.backup()
+
