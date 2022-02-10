@@ -31,9 +31,9 @@ class Drive:
         file_metadata = {
             'name': filename,
             'parents': [folder_id],
-            'mimeType': '*/*'
+            'mimeType': 'application/sql'
         }
-        media = MediaFileUpload(filename,mimetype='*/*',resumable=True)
+        media = MediaFileUpload(filename,mimetype='application/sql',resumable=True)
         file = service.files().create(body=file_metadata, media_body=media, fields='id').execute()
         print ('File ID: ' + file.get('id'))
 
