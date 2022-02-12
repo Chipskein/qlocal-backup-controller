@@ -8,7 +8,7 @@ creating using pg_dump and pg_restore insted of heroku-cli tools
 ### How config
 Put a google drive credentials.json in root directory and create a .env file as in .env.example
 ### How to use
-Just run ./qlocal_backup.py passing one of operation below
+Just run ./qlocal-backup.py passing one of operation below
 |||
 | ------- | ---  |
 | **drive** |   *Download & Upload backup to Gdrive* |
