@@ -69,7 +69,9 @@ class BackupController:
         os.system(f'pg_dump -F c --no-acl --no-owner --quote-all-identifiers {URL} --file latest.dump')
         print('Downloading Database Dump...PASSOU')
     def restore_database_to_sql(self):
-        os.system('pg_restore -f tmpfile.sql latest.dump')  
+        print('Dump to sql file...')
+        os.system('pg_restore -f tmpfile.sql latest.dump')
+        print('Dump to sql file...PASSOU')  
     def generate_filename(self):
         return f'backup({datetime.now().strftime("%d-%m-%Y")}).sql'
     def backup_to_sql(self):
