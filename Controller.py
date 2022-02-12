@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#import psycopg2
 import os
 from dotenv import load_dotenv
 import urllib.parse as urlparse
@@ -89,6 +88,5 @@ class BackupController:
         os.system(f'pg_restore --verbose --clean --no-acl --no-owner -h localhost -U {user_name} -d {database_name} latest.dump')
         print(f'Backup to Local {database_name}...PASSOU')
         os.remove('latest.dump')
-#Make CLI controller
-control=BackupController()
+
 
