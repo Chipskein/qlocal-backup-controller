@@ -80,6 +80,7 @@ class BackupController:
         filename=self.generate_filename()
         #move and rename tmpfile to sql/filename
         os.replace('tmpfile.sql',f'sql/{filename}')
+        os.remove('latest.dump')
     def backup_to_local(self):
         database_name=self.config["dbname_local"]
         user_name=self.config["user_local"]

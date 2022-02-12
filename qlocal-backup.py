@@ -14,7 +14,7 @@ if(ope):
         controler.backup_to_local()
     if(ope=='sql'):
         print('Backup to sql file in sql/')
-        controler.backup_to_sql()()
+        controler.backup_to_sql()
 else :
     print('Syntax qlocal-backup <ope>')
     print('     drive: Downlaod & Upload backup to Gdrive')
