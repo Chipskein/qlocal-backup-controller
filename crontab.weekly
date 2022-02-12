@@ -1,1 +1,1 @@
-0 0 * * 0 /home/chipskein/Sources/backup-databases/./qlocal-backup.py
+0 0 * * 0 /home/chipskein/Sources/backup-databases/./qlocal-backup.py drive
