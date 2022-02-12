@@ -1,1 +1,1 @@
-0 0 * * 0 cd /home/chipskein/Sources/backup-databases/ && ./qlocal-backup.py drive
+0 14 * * 0 cd /home/chipskein/Sources/backup-databases/ && ./qlocal-backup.py drive
