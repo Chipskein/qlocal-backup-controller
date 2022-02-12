@@ -1,6 +1,7 @@
 # qlocal-backup-controller
 ### Description
-Cli to automate database backup and upload to gdrive,or local database,or sql file
+Cli to automate heroku database backup and upload to gdrive,or local database,or sql file
+creating using pg_dump and pg_restore insted of heroku-cli tools
 #### Warning 
 **Postgres need to be installed because this cli uses pg_dump and pg_restore**
 
