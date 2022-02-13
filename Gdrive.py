@@ -2,6 +2,7 @@
 from apiclient.discovery import build
 from oauth2client.service_account import ServiceAccountCredentials
 from googleapiclient.http import MediaIoBaseDownload,MediaFileUpload
+from dotenv import load_dotenv
 import io
 import os
 class Drive:
@@ -13,9 +14,12 @@ class Drive:
             'https://www.googleapis.com/auth/drive.appdata'
             ]
     KEY_FILE_LOCATION=None
-    FOLDER={"backups":"1u0mS3jdW6n3RifrO_0dFw7b8pkNVkFSl"}
+    FOLDER={"backups":None}
     def __init__(self,key_file_location='./credentials.json'):
         self.KEY_FILE_LOCATION=key_file_location
+        load_dotenv('.env')
+        folder=os.environ.get('G_DRIVE_FOlDER_ID')
+        self.FOLDER["backups"]=folder
         creds = ServiceAccountCredentials.from_json_keyfile_name(key_file_location,self.SCOPES)
         service = build('drive', 'v3', credentials=creds)
         self.SERVICE=service
